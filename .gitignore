@@ -11,7 +11,7 @@ Icon
 
 # Thumbnails
 ._*
-
+._index.html
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
@@ -34,5 +34,5 @@ Temporary Items
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.index.html
+
 # End of https://www.gitignore.io/api/macos,visualstudiocode
