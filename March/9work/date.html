@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function  getDayNum(time){
+            var year= +new Date(2022,0,0)
+            var now = +new Date(time)
+            var day= now-year
+            day= day/1000/60/60/24
+            return day
+        }
+        var k=getDayNum(prompt('请输入今年的某一个日期格式为年-月-日'))
+        alert(k)
+    </script>
+</body>
+</html>

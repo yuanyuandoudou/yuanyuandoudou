@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sanba = parseInt(prompt('告诉我今天几号'))
+        if(sanba > 31 || sanba < 1){
+            alert('你当我傻？特么几月份有'+sanba+'号？')
+        }
+        else{
+            diao(sanba)
+        }
+        function diao (){
+            var si = sanba%7
+            switch(si){
+                case 1:alert('今天星期一')
+                break;
+                case 2:alert('今天星期二')
+                break;
+                case 3:alert('今天星期三')
+                break;
+                case 4:alert('今天星期四')
+                break;
+                case 5:alert('今天星期五')
+                break;
+                case 6:alert('今天星期六')
+                break;
+                case 0:alert('今天星期天')
+                break;
+            }
+        }
+
+    </script>
+</body>
+</html>

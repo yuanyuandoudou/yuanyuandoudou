@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+        }
+        .box{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            margin-top: 200px;
+
+        }
+        .box1{
+            background-color: greenyellow;
+            position: relative;
+            width: 50px;
+            height: 50px;
+        }
+        .box2{
+            background-color: pink;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            font-size: 30px;
+            left: 50px;
+            top:-50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <div class="box1">碰我</div>
+    <div class="box2">我里面有很多内容哈</div>
+</div>
+    <script>
+        const pdiv = document.querySelector('.box1')
+        const hdiv = document.querySelector('.box2')
+        const ddiv = document.querySelector('.box')
+
+        ddiv.addEventListener('mouseover',() =>{
+            hdiv.style.display='block'
+      },true)
+        ddiv.onmouseout = function(){
+            hdiv.style.display='none'
+        }
+
+    </script>
+</body>
+</html>

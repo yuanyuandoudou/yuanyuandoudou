@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var count = +prompt('请输入班级人数')
+        var max = 0
+        var min = 0
+        var maxmin = []
+        for(var i = 0; i < count; i++ ){
+           maxmin[i] = +prompt('请输入第'+(i+1)+'人的成绩')
+           if(i==0){
+               min = maxmin[i]
+               max = maxmin[i]
+           }
+           else if(maxmin[i]>=max){
+               max = maxmin[i]
+           }
+           else if(maxmin[i] < min){
+               min= maxmin[i]
+           }
+        }
+        alert('最高分为'+max+'\n'+'最低分为'+min+'\n'+'所有人的成绩为'+maxmin)
+    </script>
+</body>
+</html>

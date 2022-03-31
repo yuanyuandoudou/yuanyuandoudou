@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>点击</button>
+    <button>解除</button>
+    <ul>
+        <li>aaa</li>
+    </ul>
+    <script src="../18work/js/jquery.js"></script>
+    <script>
+        // $('button').click(function(){
+        //     console.log('时间触发了')
+        // })
+        // $('li').click(function(){
+        //     $(this).css('background','green')
+        // })
+        // $('ul').append('<li>ss</li>')
+        // 缺点 绑定的事件没法解除   新增的元素默认是没有之前绑定过得事件
+        $('button').eq(0).on('click',function(){
+            console.log('事件触发了')
+        })
+        $('button').eq(1).on('click',function(){
+        $('button').eq(0).off('click')
+        })
+        $('ul').on('click','li',function(){
+            console.log('li事件触发了')
+            $(this).css('background','green')
+        })
+        $('ul').append('<li>sss</li>')
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sum = 0
+        var scoreArr=[]
+        for(var i = 0; i< 5; i++){
+           scoreArr[i] = +prompt('输入第'+(i+1)+'个学生的成绩')
+           sum += scoreArr[i]
+        }
+        alert('五个成绩之和为'+sum+'|平均值为'+(sum/scoreArr.length))
+    </script>
+</body>
+</html>

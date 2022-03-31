@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则</title>
+</head>
+<body>
+    <script>
+        //1.复杂 new RegExp
+        var re = new RegExp(/123/)
+        //2.简单
+        var re1 = /123/
+        console.log(re,re1)
+        
+        console.log(re.test(123));//true
+        console.log(re.test(456));//false
+
+        var str = 'sfsklfjionwkefkslj'
+        //search     类似indexOf
+        console.log(str.search(/k/))//3  返回第一个查找成功的下标，后面的不再查找
+        console.log(str.search(/g/))//-1 查找不存在
+    </script>
+</body>
+</html>

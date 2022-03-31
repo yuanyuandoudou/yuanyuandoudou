@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            margin:200px 200px;
+            border: 1px solid coral;
+            border-radius: 50%;
+            box-shadow: 0 0 50px coral;
+        }
+        button{
+            display: block;
+            width: 80px;
+            margin:520px 310px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button>开始变色</button>
+    <script>
+        const oBtn = document.querySelector('button')
+        const oDiv = document.querySelector('div')
+        var timer
+        oBtn.addEventListener('click',function(){
+          
+                biaoge()
+           
+        })
+        function biaoge(){
+                     if(oBtn.innerText=='开始变色'){
+                    oBtn.innerText='停止变色'
+                timer = window.setInterval(() => {oDiv.style.background=randomColor()
+                }, 500)
+                }
+                    else if(oBtn.innerText=='停止变色'){
+                    oBtn.innerText='开始变色'
+                    window.clearInterval(timer)
+                }
+                   
+        }
+
+        
+
+        function randomColor(){
+            var str = '#'
+            var se = [1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']
+            for(var c=0; c<6;c++){
+                var yan=Math.round(Math.random()*15)
+                str+=se[yan]
+            }
+            oBtn.innerText
+            return str
+        }
+    </script>
+</body>
+</html>

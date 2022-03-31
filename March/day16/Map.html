@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Map 是一种特殊的数据结构
+        let m = new Map()
+        let o = new Object()
+        // 给Map添加数据 set
+        m.set('name','春天')
+        m.set(1,'我是数字')
+        m.set(o,'我是一个对象')
+        m.set(10.1,{'age':20})
+        // 输出
+        console.log(m   )
+        console.log(10.1)
+
+        // 获取map中的值
+        console.log(m.get('name'))
+        console.log(m.get(1))
+        console.log(m.get(o))
+
+        //has 判断是否存在对应的键名
+
+        console.log(m.has(1));
+
+        // delete 删除
+        m.delete(o)
+        console.log(map)
+
+    </script>
+</body>
+</html>

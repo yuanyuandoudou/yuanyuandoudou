@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: decimal;
+        }
+    </style>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10" placeholder="请输入留言内容"></textarea>
+    <button>下楼留言</button>
+    <button>上楼留言</button>
+    <ul>
+        <li>不跑堂</li>
+    </ul>
+    <script>
+        const txt = document.querySelector('textarea')
+        const btn = document.querySelectorAll('button')
+        const oUl = document.querySelector('ul')
+        btn[0].onclick= function(){
+            var value = txt.value
+            var oLi = document.createElement('li')
+            oLi.innerHTML=value
+            oUl.appendChild(oLi)
+            txt.value=''
+        }
+        btn[1].onclick= function(){
+            var value = txt.value
+            var oLi = document.createElement('li')
+            oLi.innerHTML=value
+            oUl.insertBefore(oLi,oUl.childNodes[0])
+            txt.value=''
+        }
+    </script>
+</body>
+</html>

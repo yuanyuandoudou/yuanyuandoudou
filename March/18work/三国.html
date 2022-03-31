@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 350px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+            background: black;
+        }
+        .box1{
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .box>div{
+            position: relative;
+        }
+        .box>div>div{
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top:0;
+            left: 0;
+            display: none;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div><img src="./images/001.jpg" alt="2"><div></div></div>
+        <div><img src="./images/002.jpg" alt="2"><div></div></div>
+        <div><img src="./images/003.jpg" alt="2"><div></div></div>
+        <div><img src="./images/004.jpg" alt="2"><div></div></div>
+        <div><img src="./images/005.jpg" alt="2"><div></div></div>
+        <div><img src="./images/006.jpg" alt="2"><div></div></div>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $('.box').hover(function(){
+            $('.box>div>div').toggleClass('box1').show()
+        })
+        $('.box>div>div').mouseenter(function(){
+            $(this).hide()
+        })
+        $('.box>div').mouseleave(function(){
+            $('.box>div>div').show()
+        })
+    </script>
+</body>
+</html>

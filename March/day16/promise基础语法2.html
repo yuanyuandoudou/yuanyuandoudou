@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.创建一个promise对象，对象里保存了一个将来的结果
+        // 参数是一个回调函数，这个回调函数有两个参数值 参数1. resolve 表示成功 参数2. reject表示失败
+        let pro = new Promise((resolve,reject) =>{
+            console.log('我是一个promise对象')
+            // resolve('mysuccess')   //只有这样一个参数才会被下面的res运行
+            reject('我失败了') //只有这样一个参数，才会被下面的err运行
+        })
+        //注意：Promise的回调函数中 resolve和reject只能运行一个
+        // 想要获取promise对象的结果，必须写成 变量名.then()
+        // then 有两个参数
+        // 参数1：可以接受 成功的回调
+        // 参数2：可以接受失败的回调
+        pro.then(
+            (res)=>{
+                console.log('成功的回调运行了',res)
+            },
+        (err)=>{
+            console.log('失败的回调运行了',err)
+        })
+        //promise 回调函数的函数体中有resolve，then的一个回调函数会执行
+        //resolve的参数会then的第一个回调函数的参数接受
+        //promise 回调函数的函数体中有reject， then的第二个回调函数会执行
+        //reject的参数会then的第二个回调函数的参数接受
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var zong = +prompt('请输入需要比较大小的总个数')
+        var gent = 0
+        var dage = []
+        for(var i=0; i<zong; i++){
+            dage[i]= +prompt('请输入第'+(i+1)+'个数')
+            if(i !== 0){
+                for(var j=0; j<dage.length-1;j++){
+                    if(dage[j] <= dage[dage.length-1]){
+                        gent = dage[j]
+                        dage[j]= dage[dage.length-1]
+                        var s = dage.length
+                        for(var k=(dage.length-2);k>j&&i>1;k--){
+                           dage[s-1] = dage[k]
+                           s--
+                        } 
+                        dage[j+1]= gent
+                    }
+                }
+            }
+        }
+        alert(dage)
+    </script>
+</body>
+</html>

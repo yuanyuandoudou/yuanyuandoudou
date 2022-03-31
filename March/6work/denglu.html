@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            margin:500px auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="">
+        用户名：<input type="text" name="diaomao" id="yhm" value="">
+        密码：<input type="password" name="" id="mm" value="">
+        <br/>
+        <br/>
+        <button onclick="getText()">获取值</button>
+    </form>
+    </div>
+    <script>
+        function getText(){
+            var denglu = document.getElementById('yhm').value;
+            var mima = document.getElementById('mm').value;
+            if(denglu == 'admin'&& mima == '123456'){
+                alert('用户登录成功')
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

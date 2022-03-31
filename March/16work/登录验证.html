@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    用户名：<input type="text" name="" id=""><br/>
+    <span>用户名  6-16 位 数字字母下划线</span>
+    密码：<input type="password" name="" id=""><br/>
+    <span>密码  6-16 位数字或字母</span>
+    手机号：<input type="text" name="" id=""><br/>
+    <span>手机号 11位数字</span>
+    验证码：<input type="text" name="" id=""><br/>
+    <span>验证码 4位字母或数字</span>
+
+    <button>提交</button>
+
+    <script>
+        var oInput = document.querySelectorAll('input')
+        var btn = document.querySelector('button')
+        var span = document.querySelectorAll('span')
+
+        var reuser = /(^[a-z][0-9][a-z0-9]$){6,16}/g
+        var repas = /[a-z0-9A-Z]{6,16}/g
+        var retel = /^[133|149|153|173|177|180|181|189|190|191|193|199]\d{8}$/g
+        var retest = /^[0-9A-Za-z]{4}$/
+        if(!reuser.test(input[0].value)){
+            span[0].style.display='block'
+        }
+        if(!repas.test(input[1].value)){
+            span[1].style.display='block'
+        }
+        if(!reutel.test(input[2].value)){
+            span[2].style.display='block'
+        }
+        if(!retest.test(input[3].value)){
+            span[3].style.display='block'
+        }
+
+    </script>
+</div>
+</body>
+</html>

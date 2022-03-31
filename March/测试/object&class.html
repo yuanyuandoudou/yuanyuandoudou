@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Foo(name,age,height){
+            this.name=name;
+            this.age=age;
+            this.height=height
+        }
+        var s = new Foo(1,2,3)
+        console.log(s)
+        console.log(s instanceof Foo)
+
+        class Boo{
+            kk (){
+                console.log('你好')
+            }
+        }
+        var b = new Boo
+        console.log(b.kk())
+    </script>
+</body>
+</html>

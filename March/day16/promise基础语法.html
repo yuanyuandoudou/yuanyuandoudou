@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1.创建一个promise对象，对象里保存了一个将来的结果
+        // 参数是一个回调函数，这个回调函数有两个参数值  参数1: resolve 表示成功 ;reject 表示失败
+        let pro = new Promise((resolve,reject)=>{
+            console.log('我是一个promise对象')
+        })
+        console.log(pro) // pending 进行中（因为回调函数中没有return返回值，所以输出pending）   PromiseResult: undefined
+        // 2.返回成功的值
+        let pro1 = new Promise((resolve,reject)=>{
+            console.log('我是一个promise对象')
+            //resolve promise返回一个成功的结果
+            resolve('success')
+        })
+        console.log(pro1) // fulfilled 结果成功  PromiseState：fulfilled成功 PromiseResult:success
+        // 3.返回失败的值
+        let pro2 = new Promise((resolve,reject)=>{
+            console.log('我是一个promise对象')
+            //resolve promise返回一个失败的结果
+            reject('失败')
+        })
+        console.log(pro2) // PromiseState:rejected  失败 PromiseResult: 失败
+</script>
+</body>
+</html>

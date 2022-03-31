@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: url(./1.jpg);
+        }
+        .box{
+            width: 260px;
+            height: 35px;
+            box-sizing: border-box;
+            display: flex;
+            margin: 200px auto;
+            justify-content: space-around;
+            border:2px solid white;
+        }
+        img{
+            width: 60px;
+            height: 30px;
+            cursor: pointer;
+           
+        }
+  
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div><img src="./1.jpg" alt=""></div>
+        <div><img src="./2.jpg" alt=""></div>
+        <div><img src="./3.jpg" alt=""></div>
+        <div><img src="./4.jpg" alt=""></div>
+    </div>
+    <script>
+        const change = document.getElementsByTagName('img')
+        for(var i=0;i<4;i++){
+            change[i].onclick = function(){
+                document.body.style.background=' url('+this.src+')'
+            }
+        }
+    </script>
+</body>
+</html>

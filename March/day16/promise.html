@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //吃个🐔
+        // 1.买鸡 2.杀鸡 3.切块 4.放调料 5.炖鸡 6.盛出来吃
+        // ↑必须顺序执行，不能先切块再买鸡，也不能先炖鸡再杀鸡
+        // setTimeout(()=>{
+        //     console.log('1.买鸡')
+        // },2000)
+        // setTimeout(()=>{
+        //     console.log('2.杀鸡')
+        // },4000)
+        // setTimeout(()=>{
+        //     console.log('3.切块')
+        // },1000)
+        // setTimeout(()=>{
+        //     console.log('4.放调料')
+        // },500)
+        // setTimeout(()=>{
+        //     console.log('5.炖鸡')
+        // },6000)
+        // setTimeout(()=>{
+        //     console.log('6.吃鸡')
+        // },3000)
+
+
+        //👆🏻 因为是异步操作，导致结果的顺序性不可控
+        //修改 👇🏻
+        setTimeout(()=>{
+            console.log('1.买鸡')
+            setTimeout(()=>{
+            console.log('2.杀鸡')
+            setTimeout(()=>{
+            console.log('3.切块')
+            setTimeout(()=>{
+            console.log('4.放调料')
+            setTimeout(()=>{
+            console.log('5.炖鸡')
+            setTimeout(()=>{
+            console.log('6.吃鸡')
+        },3000)
+        },6000)
+        },500)
+        },1000)
+        },4000)
+        },2000)
+        //👆🏻 解决了顺序问题，但是带来了新的问题，回调地狱
+        // promise 解决地狱回调问题
+        
+        
+        
+
+    </script>
+</body>
+</html>

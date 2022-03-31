@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            cursor:pointer;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <textarea name="" id="" cols="30" rows="10" placeholder="请填写留言内容"></textarea>
+        <br/>
+        <button class="1">留言</button>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script>
+        var floor = 0 
+        $('button').click(function(){
+           var txt = $('textarea').val()
+           if(txt == ''){
+               alert('留言内容不能为空哦')
+               return
+           }
+           floor++
+           $('.container').append(`<p>第${floor}层:${txt}&nbsp;&nbsp;<span>x</span></p>`)
+           $('textarea').val('')
+           $('span').css('color','red')
+           $('span').click(function(){
+            $(this).parent().remove()
+        })
+        })
+
+        
+    </script>
+</body>
+</html>

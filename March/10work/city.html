@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="" placeholder="请输入要查找的城市">
+    <button>搜索</button>
+    <ul>
+        <li>广州</li>
+        <li>深圳</li>
+        <li>浙江</li>
+        <li>武汉</li>
+    </ul>
+    <script>
+        const oinput = document.querySelector('input')
+        const btn = document.querySelector('button')
+        const ali = document.querySelectorAll('li')
+        btn.onclick= function(){
+            var value = oinput.value
+            oinput.value=''
+            for(var i = 0 ;i < ali.length; i++){
+                 ali[i].style.background=''
+            }
+            for(var i = 0 ;i< ali.length;i++){
+                if(ali[i].innerText==value){
+                    ali[i].style.background ='red'
+                    break
+                }
+                else if(i == ali.length-1){
+                    
+                    alert('查无此城市')    
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var re = /abc/ //只要存在abc就返回true 否则返回false
+        console.log(re.test('abc'));//true
+        console.log(re.test('abcd'));//true
+        console.log(re.test('wwabc'));//true
+        console.log(re.test('wwabcd'));//true
+        console.log(re.test('wwabddd'));//false
+        console.log('分隔')
+        var re1 = /^abc/ // 只有abc开头的才返回true 否则返回false
+        console.log(re1.test('abc'));//true
+        console.log(re1.test('abcd'));//true
+        console.log(re1.test('wwabc'));//false
+        console.log(re1.test('wwabcd'));//false
+        console.log(re1.test('wwabddd'));//false
+        console.log('分隔')
+        var re2 = /abc$/ //只有abc结尾的才返回true 否则返回false
+        console.log(re2.test('abc'));//true
+        console.log(re2.test('abcd'));//false
+        console.log(re2.test('wwabc'));//true
+        console.log(re2.test('wwabcd'));//false
+        console.log(re2.test('wwabddd'));//false
+        console.log('分隔')
+        var re3=/^abc$/   //精准返回，必须只含有abc才返回true
+        console.log(re3.test('abc'));//true
+        console.log(re3.test('abcd'));//false
+        console.log(re3.test('wwabc'));//false
+        console.log(re3.test('wwabcd'));//false
+        console.log(re3.test('wwabddd'));//false
+        
+        
+    </script>
+</body>
+</html>

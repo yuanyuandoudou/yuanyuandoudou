@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .box1{
+            width: 500px;
+            height: 200px;
+            background-color: aqua;
+        }
+        span{
+            font-size: 16px;
+            position: absolute;
+            left:480px;
+            top:0;
+            background: #ccc;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <span>X</span>
+    <div class="box1"></div>
+<script>
+        const ospan = document.querySelector('span');
+        const hdiv = document.querySelector('div');
+
+        ospan.onclick = function(){
+            hdiv.style.display='none';
+            if(hdiv.style.display=='none'){
+                ospan.style.display='none'  
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

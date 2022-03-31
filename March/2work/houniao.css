@@ -1,0 +1,187 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.top{
+    width: 100%;
+    border-bottom: .2133rem solid rgb(240, 236, 236);
+    color:#eadeaf;
+    font-size: .32rem;
+}
+.top span{
+    font-size: .8rem;
+}
+.toptu{
+    width:100%;
+    position: relative;
+}
+.toptu img{
+    width:100%;
+}
+.box{
+    width: 100%;
+}
+.box1{
+    width: 100%;
+    display: flex;
+    border-bottom: 1px dashed #ccc;
+    padding:.32rem .1333rem .32rem .1333rem;
+}
+.tutu{
+    width: 40%;
+    position: relative;
+}
+.tutu span{
+    font-size: .3733rem;
+    color: white;
+    position: absolute;
+    margin-left: -0.7467rem;
+    margin-top: 1.7333rem;
+}
+.tutu img{
+    width: 100%;
+    height: 100%;
+}
+.tuijian{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+.zhan{
+    flex:1;
+    padding-left: .3333rem;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+.spsz{
+    display: flex;
+    justify-content: space-around;
+    padding: .5333rem 0 .5333rem 0;
+}
+.top p{
+    margin-top: 5px;
+    text-align: center;
+}
+.tuijian span{
+    color:#858585;
+    font-size: .4267rem;
+    padding: 0.4rem 0  0.4rem 0;
+    display: inline-block;
+}
+.biao{
+    font-size: 14px;
+}
+.wei span{
+    color: #484848;
+    font-size: .32rem;
+    background-color: rgb(221, 217, 217);
+    padding:.0533rem;
+    border-radius: .1067rem;
+}
+.qian span{
+    font-size: .32rem;
+    color: rgb(97, 94, 94);
+    margin-right: .4rem;
+}
+.fdj{
+
+    width: 1.0667rem;
+    height: 1.0667rem;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position:fixed;
+    top:3%;
+    left: 5%;
+}
+.fdj span{
+    font-size: .48rem;
+}
+.footer{
+    width: 100%;
+    background-color: #f2f2f2;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: .32rem;
+}
+.footer div{
+    margin-right: .2667rem;
+}
+.a1{
+    width: 130px;
+    height: 130px;
+    background: url(./footer.png) no-repeat;
+    background-position:0px -134px;
+    zoom:0.3;
+}
+.a2{
+    width: 130px;
+    height: 130px;
+    background: url(./footer.png) no-repeat;
+    background-position: -123px -134px;
+    zoom:0.3;
+}
+.a3{
+    width: 130px;
+    height: 130px;
+    background: url(./footer.png) no-repeat;
+    background-position:-251px 0px;
+    zoom:0.3;
+}
+.a4{
+    width: 130px;
+    height: 130px;
+    background: url(./footer.png) no-repeat;
+    background-position:-368px -134px;
+    zoom:0.3;
+}
+.a5{
+    width: 130px;
+    height: 130px;
+    background: url(./footer.png) no-repeat;
+    background-position:-510px -134px;
+    zoom:0.3;
+}
+.a1:hover{
+    background-position:0px 0px;
+}
+.a2:hover{
+    background-position:-123px 0px;
+}
+.a4:hover{
+    background-position:-380px 0px;
+}
+.a5:hover{
+    background-position:-510px 0px;
+}
+.sidian span{
+    display: inline-block;
+    width: .2133rem;
+    height: .2133rem;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: .08rem;
+}
+.sidian{
+    position: absolute;
+    margin-top: -0.8rem;
+    margin-left: 41%;
+}
+.sidian span:hover{
+    background-color: aqua;
+    width:.3733rem;
+    height: .2133rem;
+    border-radius: .1333rem;
+}

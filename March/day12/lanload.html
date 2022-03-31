@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+            height: 200px;
+            margin-top: 300px;
+            border: 1px solid #ccc;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <img _src="./1.jpg" alt="">
+    <img _src="./2.jpg" alt="">
+    <img _src="./3.jpg" alt="">
+    <img _src="./4.jpg" alt="">
+    <script>
+        var oImg = document.querySelectorAll('img')
+
+        window.onscroll= function(){
+            console.log(document.documentElement.clientHeight)
+            console.log(document.documentElement.scrollTop)
+            var sc = document.documentElement.scrollTop
+            var hi = document.documentElement.clientHeight
+            for(var i= 0 ;i<oImg.length;i++){
+                if(oImg[i].offsetTop< sc+hi && !!oImg[i].getAttribute('_src')){
+                oImg[i].src = oImg[i].getAttribute('_src')
+                oImg[i].removeAttribute('_src')
+                console.log('图片加载')
+                }
+            }
+        }
+    </script>
+</body>
+</html>

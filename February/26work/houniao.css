@@ -1,0 +1,50 @@
+
+.box{
+    width: 500px;
+    height: 450px;
+    margin:200px auto;
+    position: relative;
+}
+.box1{
+    width: 500px;
+    height: 300px;
+    color:white;
+    display: inline-block;
+    background: url(https://pic.51houniao.com/84308c97f18f494d882ed95c739edeb3.jpg) no-repeat;
+}
+.box1 span{
+    position: absolute;
+    top: 270px;
+    left:470px;
+}
+.box1 div{
+    position: absolute;
+    top:270px;
+    left:450px;
+}
+.box2{
+    width: 500px;
+    height: 150px;
+    background-color: white;
+}
+.sha{
+    display: block;
+    border:2px solid #c0bebe;
+    border-radius: 3px;
+}
+.box2 img{
+    margin-top: 20px;
+}
+.box2 span{
+    float:right;
+}
+.box2 span::before{
+    font-size: 40px;
+    content:"7676";
+    color:aquamarine;
+}
+.bi{
+    border:2px solid #c0bebe;
+    border-radius: 3px;
+
+}

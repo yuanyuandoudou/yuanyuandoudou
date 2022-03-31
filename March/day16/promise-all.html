@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var p0 = new Promise((resolve,rejet)=>{
+
+        })
+        var p1 = new Promise((resolve,rejet)=>{
+            resolve('成功')
+        })
+
+        var p2 = new Promise((resolve,rejet)=>{
+            resolve('success')
+        })
+        var p3 = new Promise((resolve,rejet)=>{
+            reject('fail')
+        })
+
+        // promise.all([p1,p2,p3]).then(data)
+    </script>
+</body>
+</html>

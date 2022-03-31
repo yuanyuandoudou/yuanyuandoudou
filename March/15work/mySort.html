@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排序</title>
+</head>
+<body>
+    <script>
+        var arr = [4,6,7,3,8,2,4,8,0]
+        var dd = [3,5,6,34,43,7,46,42,5,6]
+        Array.prototype.mySort = function(k){
+            for(var i = 1 ; i<k.length ; i++){
+                for(var j = 0;j<k.length-i;j++){
+                    var c = 0
+                    if(k[j]>+k[j+1]){
+                        c = k [j]
+                        k[j]=k[j+1]
+                        k[j+1]=c
+                    }   
+                }
+            }
+            return k
+        }
+        console.log(arr.mySort(arr))
+        console.log(arr.mySort(dd))
+
+    </script>
+</body>
+</html>

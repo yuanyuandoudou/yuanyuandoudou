@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //var在if里面也会变量提升
+        // if(!(b in window)){
+        //    var b = 1
+        // }
+        // console.log(b)
+
+
+        // 因为c先赋值了数值型数据
+        var c  = 1
+        function c(c){
+            console.log(c)
+        }
+        c(2)
+       
+    </script>
+</body>
+</html>

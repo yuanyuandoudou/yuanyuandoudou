@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>点击调用函数</div>
+    <button>点击自动触发div绑定的事件</button>
+    <input type="text">
+    <script src="../18work/js/jquery.js"></script>
+    <script>
+        $('div').click(function(){
+            console.log('div绑定的事件触发了')
+        })
+        $('button').click(function(){
+            $('div').trigger('click')
+            // $('input').trigger('focus')
+            $('input').triggerHandler('focus')
+            //triggerHandler不能触发默认事件
+        })
+    </script>
+</body>
+</html>

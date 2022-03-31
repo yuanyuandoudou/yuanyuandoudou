@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ES6 提供了新的数据结构 Set 它类似于数组，但是成员的值都是唯一的，没有重复值
+
+        // 1.创建set对象
+        var s1 = new Set()
+        console.log(s1) 
+        console.log(s1.size)
+
+        // 2.创建set对象并初始化
+        let s2 = new Set([1,2,3,4])
+        console.log(s2)
+        console.log(s2.size)
+
+        // 3.将Set对象转数组
+        let arr = [...s2]
+        console.log(arr)
+
+        // 4.Set里面的数据如果重复了   会默认去重
+        let s3 = new Set([1,2,2,2,3,4,4,4])
+        console.log(s3)
+        console.log(s3.size)
+
+        // 5.使用Set做数组去重
+        function quchong(arr){
+            var ss = new Set(arr)
+            console.log(ss)
+            return [...ss]
+        }
+        console.log(quchong([1,2,2,3,1,1,5,5,6]))
+
+        //  6.给Set对象添加新数据
+        s2.add('a')
+        s2.add('b')
+        console.log(s2)
+
+        // 7.删除数据  
+        s2.delete(1)  //括号内的参数是数据，不是下标
+        console.log(s2)
+
+        // 8.查找 set里面有没有该成员 返回布尔值
+        console.log(s2.has(4)) //括号内的参数是数据，不是下标
+
+        // 9.清空 所有
+        s2.clear()
+        console.log(s2)
+
+        // 10.set数据遍历可以用forEach
+        
+        let s6 = new Set([2,15,6,2,6,1,4,7,2])
+
+        s6.forEach((value) => {
+            console.log(value)
+        });
+
+</script>
+</body>
+</html>

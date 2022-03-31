@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var re = /^abc{3}$/  // 3个c结尾
+        console.log(re.test('abc'))
+        console.log(re.test('abccc'))
+
+        var re1 = /^(abc){3}$/    //3个abc结尾
+        console.log(re1.test('abc'))
+        console.log(re1.test('abccc'))
+        console.log(re1.test('abcabcabc'))
+        
+        //中文匹配
+        var str = 'jsfij叫连连+看kk说的+覅lkjwekr撒粉'
+        var re1 = /[\u4e00-\u9fa5]/g
+        console.log(str.match(re1))
+
+        // +号匹配  特殊符号需要转义
+        var re2 = /\+/g
+        console.log(str.match(re2))
+ </script>
+</body>
+</html>

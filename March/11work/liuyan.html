@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: decimal;
+        }
+        span{
+            padding-left: 30px;
+            color:red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10" placeholder="请输入留言内容"></textarea>
+    <button>下楼留言</button>
+    <ul>
+        <li>不跑堂 <span>x</span></li>
+    </ul>
+    <script>
+        const txt = document.querySelector('textarea')
+        const btn = document.querySelector('button')
+        const oUl = document.querySelector('ul')
+        btn.onclick= function(){
+            var text = txt.value
+            var oLi = document.createElement('li')
+            oLi.innerHTML=text + "<span> x </span>"
+            oUl.appendChild(oLi)
+            txt.value=''
+            
+            var oSpan = document.querySelectorAll('span')
+            for(var i=0;i<oSpan.length;i++){
+            oSpan[i].onclick= function(){ 
+              var hen = confirm('确定删除此条留言吗？')
+              if(hen == true){
+                  oUl.removeChild(this.parentNode)
+              }
+              else{
+                  i=oSpan.length
+              }
+            }
+        }
+        }
+      
+    </script>
+</body>
+</html>

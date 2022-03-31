@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <button>点击变色</button>
+    <div></div>
+    <script>
+        const btn = document.getElementsByTagName('button')//获取的值是类数组
+        const cDiv = document.getElementsByTagName('div')//获取的值是类数组
+        btn[0].onclick = function(){
+            var sese = randomColor(0,15)
+            cDiv[0].style.background=sese
+          }
+        function randomColor(star,end){
+            var str = '#'
+            var yanse = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']
+            for(var i = 0 ; i<6 ; i++){
+            str+= yanse[Math.round(Math.random()*(end-star)+star)]
+            }
+            return str
+        }
+    </script>
+</body>
+</html>

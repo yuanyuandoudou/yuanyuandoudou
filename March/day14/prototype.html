@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function Foo(name,age){
+        //     this.name=name
+        //     this.age=age
+        //     this.play=function(){
+        //         console.log('在打英雄联盟')
+        //     }
+        // console.log(this)
+        // }
+        // var b = new Foo('wang',12)
+        // console.log(Foo.prototype)
+        // console.log(Foo.prototype.constructor)
+        // console.log(b.__proto__.constructor)
+        // console.log(b.__proto__)
+        // console.log(Foo.prototype === b.__proto__)
+
+
+        // var a = [1,2,3,4,5,6]
+        // Array.prototype.sum=function(){
+        //     var dd=0
+        //     for(var i = 0;i< this.length;i++ ){
+        //         dd+= this[i]
+        //     }
+        //     return dd
+        // }
+        // console.log(a.sum())
+        function Boo(name,age){
+            this.name = name
+            this.age = age
+            this.vs = function(){
+                console.log('你是猪呀')
+            }
+        }
+        Boo.prototype.xx = function(){
+            console.log('我救世主')
+        }
+        var hh = new Boo('豆',25)
+        console.log(hh)
+        console.log(hh.xx())
+        var dd = new Boo('哥',22)
+        console.log(dd.xx)
+
+        console.log(hh.__proto__===Boo.prototype)
+        console.log(Boo.prototype.constructor)
+        console.log(Boo.prototype.__proto__===Object.prototype)
+        console.log(Boo.prototype.__proto__)
+        console.log(Boo.prototype)
+        console.log(Object.prototype.__proto__)
+
+</script>
+</body>
+</html>

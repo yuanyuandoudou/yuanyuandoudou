@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var abc = [3,5,1,6,7,43,3,6,7,9,0,3,2,3,4,6,7,7,8,4,3,1,8,9,0,4,22,34,65]
+        var bcd = []
+        var k=0
+        bcd[k] = abc[k]
+        for(var i=0;i<abc.length;i++){
+            for(var j=0;j<bcd.length;j++){
+                if(abc[i]===bcd[j]){
+                    break;
+                }
+                else if(j== bcd.length-1){
+                    k++
+                    bcd[k]= abc[i]
+                }
+            }
+        }
+        console.log(bcd)
+    </script>
+</body>
+</html>

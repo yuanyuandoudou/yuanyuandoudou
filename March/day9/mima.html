@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first{
+            display:none;
+
+        }
+        .second{
+            color:#ccc;
+        }
+        .red{
+            color:red;
+        }
+        .xiaodi{
+            outline:none;
+            border: 1px solid aqua;
+            border-radius: 3px;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="password" name="" id="" class="dage" placeholder="密码">
+    <span class="first"></span>
+    <script>
+        const oinput = document.querySelector('input')
+        const ospan = document.querySelector('span')
+
+        oinput.onfocus = function(){
+            ospan.className='second'
+            oinput.className='xiaodi'
+            if(oinput.value == ''){
+                ospan.innerText='8-16个字符，需要包含大小写和数字'
+            }
+            else if(oinput.value !== ''){
+                ospan.innerText='8-16个字符，需要包含大小写和数字'
+            }
+        }
+        oinput.onblur = function(){
+            ospan.className='first'
+            oinput.className='dage'
+            if(oinput.value.length<8&&oinput.value!==''){
+                ospan.className='red'
+                ospan.innerText='您输入的密码太短'
+            }
+            else if(oinput.value.length>16){
+                ospan.className='red'
+                ospan.innerText='您输入的密码太长'
+            }
+        }
+    </script>
+</body>
+</html>

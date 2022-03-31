@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var re = /[abc]/  //字符类  需要写 [] 里面的字符只要匹配到一个就返回true
+        console.log(re.test('andy'))// true
+        console.log(re.test('body'))// true
+        console.log(re.test('hello'))// false
+
+
+        var re1 = /^[abc]$/  // 字符串只有一个字符，是a或者b或者c
+        console.log(re1.test('andy'))//false
+        console.log(re1.test('body'))//false
+        console.log(re1.test('hello'))//false
+        console.log(re1.test('aa'))//false
+        console.log(re1.test('ac'))//false
+        console.log(re1.test('a'))//true
+        console.log(re1.test('b'))//true
+        console.log(re1.test('c'))//true
+
+        var re2 = /^[a-z]$/  // 字符串只有一个字符 且是小写字母
+        console.log(re2.test('w'))// true
+        console.log(re2.test('W'))// false
+
+        var re3 = /^[A-Z]$/ //字符串只有一个字符 且是大写字母
+        var re4 = /^[0-9]$/ //字符串只有一个字符 且是数字
+        var re5 = /^[0-9a-zA-Z]$/ //用户名  字符转只有一个字符，可以使大小写字母或者数字
+    </script>
+</body>
+</html>

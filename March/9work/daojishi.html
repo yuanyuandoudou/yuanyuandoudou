@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getCountDown(time){
+            var getNow = +new Date()
+            var getDown = +new Date(time)
+            var lag = getDown-getNow
+            var day = Math.floor(lag/1000/60/60/24)
+            var hours = Math.floor(lag/1000/60/60%24)
+            var minutes = Math.floor(lag/1000/60%60)
+            var seconds = Math.floor(lag/1000%60)
+            console.log('距离活动开始还有'+day+'天'+ addZero(hours) +'时'+ addZero(minutes) +'分'+ addZero(seconds))
+        }
+
+    function addZero(zero){
+       return zero>9?zero:'0'+ zero
+    }
+    getCountDown('2022,3,17,12:22:22')
+    var practice = new Date()
+    var y = practice.getFullYear()
+    var m = practice.getMonth()
+    var d = practice.getDate()
+    var h = practice.getHours()
+    var f = practice.getMinutes()
+    var s = practice.getSeconds()
+    var w = practice.getDay()
+    console.log('北京时间:'+'\t'+y+'年'+addZero(m+1)+'月'+addZero(d)+'日'+'\t'+addZero(h)+':'+addZero(f)+':'+addZero(s)+'\t'+convert(w))
+    function convert(week){
+        var weeks = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
+        return weeks[week]
+    }
+    </script>
+</body> 
+</html>

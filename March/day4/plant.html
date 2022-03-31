@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .tyx{
+            width: 500px;
+            height: 500px;
+            position: relative;
+            background-color: black;
+            border-radius: 50%;
+            display: inline-block;
+            z-index: 0;
+
+        }
+        .sun{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: -webkit-radial-gradient(rgb(255, 217, 0) 25%,rgb(255, 166, 0) 50%,rgb(255, 115, 0) 75%,rgb(255, 81, 0) 100%);
+            position: absolute;
+            top: 220px;
+            left: 220px;
+        }
+        .earth{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: aqua;
+            position: absolute;
+            margin-left: 180px;
+            margin-top: 242.5px;
+            /* transition: 10s ; */
+            transform-origin: 70px 7.5px;
+            animation: name 2s linear 0s infinite;
+
+        }
+        .tu{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: pink;
+            position: absolute;
+            margin-left: 130px;
+            margin-top: 200px;
+            /* transition: 10s linear; */
+            transform-origin: 120px 50px;
+            animation: name 1.5s linear 0s infinite;
+
+        }       
+         .tian{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: greenyellow;
+            position: absolute;
+            margin-left: 300px;
+            margin-top: 20px;
+            /* transition: 13s linear; */
+            transform-origin: -50px 230px;
+            animation: name 10s linear 0s infinite;
+
+        }        
+        .hai{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: lightgray;
+            position: absolute;
+            margin-left: 420px;
+            margin-top: 250px;
+            /* transition: 15s ; */
+            transform-origin: -170px 0px;
+            animation: name 12s linear 0s infinite;
+
+        }       
+        .xin{
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            margin-left: 170px;
+            margin-top: 248px;
+            /* transition: 10s linear; */
+            transform-origin: 80px 0px;
+            animation: name 3s linear 0s infinite;
+
+        }
+        .wb{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: rgb(190, 26, 26);
+            position: absolute;
+            margin-left: 270px;
+            margin-top: 380px;
+            /* transition: 18s linear; */
+            transform-origin: -20px -130px;
+            animation: name 8s linear 0s infinite;
+
+        }
+        @keyframes name{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        /* .tyx:hover div{
+            transform: rotate(1080deg);
+        } */
+        .box1{
+            width: 450px;
+            height: 450px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            position: absolute;
+            margin:25px;
+            z-index: -1;
+
+        }
+        .box2{
+            width: 235px;
+            height: 235px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            position: absolute;
+            margin:130px;
+            z-index: -1;
+
+        }
+        .box3{
+            width: 380px;
+            height: 380px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            position: absolute;
+            margin:60px;
+            z-index: -1;
+
+        }
+        .box4{
+            width: 320px;
+            height: 320px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            position: absolute;
+            margin:90px;
+            z-index: -1;
+
+        }
+        .box5{
+            width: 130px;
+            height: 130px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            position: absolute;
+            margin: 185px;
+            z-index: -1;
+
+        }
+        .box6{
+            width: 450px;
+            height: 450px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            position: absolute;
+            margin:25px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="tyx">
+        <div class="sun"></div>
+        <div class="earth"></div>
+        <div class="tu"></div>
+        <div class="tian"></div>
+        <div class="hai"></div>
+        <div class="xin"></div>
+        <div class="wb"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+
+    </div>
+</body>
+</html>

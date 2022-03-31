@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // async await 异步转同步写法，generator和promise的语法糖解构
+
+        // 1.实例
+         //返回值是默认一个promise对象 因为字符串后面加了 async
+        // async function hello(){
+        //     return 'hello async'
+        // }
+        // console.log(hello()) 
+
+        // // 2.调用 async的函数  必须写成 函数名().then()
+        // hello().then(res=>{
+        //     console.log(res)
+        // })
+
+        // 3.await的作用
+        function test(){
+            let p = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log('test await')
+                    resolve('成功')
+                },2000)
+            })
+            return p
+        }
+
+        async function hi(){
+            await test()   //不写await 就会先执行后面的语句，加了await 必须等异步执行完并且返回后才执行后面的操作
+            console.log('今天长沙逃课')
+        }
+        hi()
+
+        //await 阻塞了下面所有语句的执行
+    </script>   
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        height: 2000px;
+    }
+
+
+ .box{
+ font-size: 20px;
+margin-left: 700px;
+margin-top: 50px;
+ color:lightskyblue;
+} 
+
+ .box2{
+ width: 60px;
+ height: 30px;
+border: 1px double lightsalmon;
+align-items: center;
+justify-content: center;
+ color: tomato;
+background-color: aquamarine;
+display: none;
+position:fixed;
+top:90%;
+left: 10px;
+ }  
+</style>
+</head>
+
+<body>
+ <div class="box">-天不生我陈平安，剑道万古如长夜- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 剑来！</div>
+ <div class="box2">y返回z</div>
+ <script>
+ var aDiv = document.querySelector(".box2");
+window.onscroll = function () {
+var scrollTop = document.documentElement.scrollTop;
+if (scrollTop >= 300) {
+aDiv.style.display = "block";
+ aDiv.onclick = function () {
+ document.documentElement.scrollTop = 0
+}
+} else {
+ aDiv.style.display = "none";
+}
+}
+
+
+</script>
+</body>
+
+</html>

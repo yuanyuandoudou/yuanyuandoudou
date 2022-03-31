@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 假设有三页数据，需要顺序显示
+
+        function getPage(page){
+            var p = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    var num = Math.round(Math.random()*10)
+                    if(num>5){
+                        resolve('成功'+num+'| page:'+page)
+                    }else{
+                        reject('失败')
+                    }
+                },1000)
+            })
+            return p
+        }
+        getPage(1).then((res)=>{
+            console.log('第一次调用')
+            console.log(res)
+            return getPage(2)
+        },(err)=>{
+            console.log(err)
+        }).then(res=>{
+            console.log('第二次调用')
+            console.log(res)
+            return getPage(3)
+        },err=>{
+            console.log(err)
+        }).then(res=>{
+            console.log(res)
+        },err=>{
+            console.log(err)
+        })
+
+        //问题：第一次调用失败的时候，后面的调用是否需要中止
+        // 如果失败的话 ，考虑使用捕获异常
+    </script>
+</body>
+</html>

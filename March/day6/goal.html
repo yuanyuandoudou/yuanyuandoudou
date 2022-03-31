@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var made = +prompt('请输入你的分数')
+
+        switch(true){
+            case made>=90 && made<100:alert('不错啊小伙子，成绩为A')
+            break;
+            case made>=80 :alert('继续努力小伙子，成绩为B')
+            break;
+            case made>=70 :alert('你天天在搞么子，成绩为C')
+            break;
+            case made>=60 :alert('你天天睡觉吧，成绩为D')
+            break;
+            case made>=0 && made<60 : alert('你回去喂猪吧，成绩为E')
+            break;
+            default: alert('你是怎么考到' + made + '分的');
+        }
+    </script>
+</body>
+</html>

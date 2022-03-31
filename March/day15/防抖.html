@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 6000px;
+        }
+        .up{
+            position: fixed;
+            text-align: center;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            bottom:50px;
+            right: 50px;
+            border: 1px solid orange;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="up">↑</div>
+    <script>
+        var up = document.querySelector('.up')
+        window.onscroll = debounce(goup,200)
+
+        function goup(){
+            var top = document.documentElement.scrollTop
+            console.log(top)
+            if(top >= 300){
+                up.style.display ='block'
+            }else{
+                up.style.display ='none'
+            }
+        }
+        function debounce(fn,delay){
+            // var timer = null
+            var timer
+            return function (){
+                // if(timer){
+                //     clearTimeout(timer)
+                //     timer = setTimeout(fn,delay)
+                // }else{
+                //    timer = setTimeout(fn,delay)
+                // }
+                clearTimeout(timer)
+                timer = setTimeout(fn,delay)
+            }
+        }
+    </script>
+</body>
+</html>

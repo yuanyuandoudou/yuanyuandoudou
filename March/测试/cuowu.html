@@ -1,0 +1,21 @@
+<ul>
+            <li>西施</li>
+            <li>貂蝉</li>
+            <li>昭君</li>
+            <li>凤姐</li>
+            <li>芙蓉姐姐</li>
+        </ul>
+        <button>按钮</button>
+        <script>
+            var oUl = document.querySelector('ul');
+            var aLi = oUl.querySelectorAll('li')
+            var oBtn = document.querySelector('button');
+            oUl.onclick = function (ev) {
+                ev.target.style.background = "red";
+            }
+            oBtn.onclick = function () {
+                var newLi = document.createElement('li');
+                newLi.innerHTML = "杨超越";
+                oUl.insertBefore(newLi,oUl.children[0]);
+            }
+        </script>

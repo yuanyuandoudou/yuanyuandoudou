@@ -1,0 +1,72 @@
+{
+  "id": "3213738",
+  "name": "mimi",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "77153",
+      "name": "新浪",
+      "font_class": "xinlang",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "77156",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "90513",
+      "name": "15天无理由退货",
+      "font_class": "15tianwuliyoutuihuo",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "201525",
+      "name": "礼物 活动",
+      "font_class": "liwuhuodong",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "561884",
+      "name": "iconfont-7tian",
+      "font_class": "iconfont7tian",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "577404",
+      "name": "向右3-fill",
+      "font_class": "xiangyou3fill",
+      "unicode": "e777",
+      "unicode_decimal": 59255
+    },
+    {
+      "icon_id": "591955",
+      "name": "wxb定位",
+      "font_class": "wxbdingwei",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "3996123",
+      "name": "消息",
+      "font_class": "xiaoxi",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "25537604",
+      "name": "维修",
+      "font_class": "weixiu",
+      "unicode": "e7d6",
+      "unicode_decimal": 59350
+    }
+  ]
+}

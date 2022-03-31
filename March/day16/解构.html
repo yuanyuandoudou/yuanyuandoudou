@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3]
+        let [a,b,c] = arr
+
+        let[d,e,f] = [4,5,6]
+
+        let g = arr[0]
+        let h = arr[1]
+        let i = arr[2]
+        console.log(a,b,c,d,e,f,g,h,i)
+        let [n1,n2] = [1,2,3,4]
+        console.log(n1,n2) // 1 2
+
+        let [p1,p2,p3,p4] = [1,2]
+        console.log(p1,p2,p3,p4) // 1  2   undefined undefined
+
+        let obj = {name:'lili', age:12}
+        let {name,age} = obj
+        //与键名不对应无法赋值
+        let {myname,myage} = obj
+        //起别名
+        let {name:kname,age:kage} = obj
+        console.log(name,age)
+        console.log(myname,myage)
+        console.log(kname, kage);
+
+    </script>
+</body>
+</html>

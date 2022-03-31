@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n = +prompt('请输入公里数')
+        var m = +prompt('是否堵车 1.堵车 2.不堵车')
+        function Foo(x,y){
+            var c = 0
+            function Boo(){
+                if(n>2){
+                c = 10 + (n-2)*5
+                }
+                else{
+                    c=10
+                }
+                if(m == 1){
+                    c+=10
+                }
+                return c
+            }
+            return Boo
+        }
+        var k = Foo(n,m)()
+
+        alert('你的打车费用为'+ k )
+    </script>
+</body>
+</html>

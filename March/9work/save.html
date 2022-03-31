@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        while(1){
+        var money = +prompt('请输入大于等于1000的金额')
+        if(money>=1000){
+            break;
+            }
+        }
+        var long = money.toString()
+        var count = Math.floor(long.length/3)
+        var k=''
+        for(var i = count;i!==0;i--){
+            k += ','.concat(long.substr(-3*i,3))
+        }
+        var g = (long.substr(0,long.length%3)).concat(k)
+        if(g.charAt(0)==','){
+            g = g.substr(1)
+        }
+        alert(g)
+    </script>
+</body>
+</html>

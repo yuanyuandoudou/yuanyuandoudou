@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100%;
+            height: 100vh;
+        }
+
+    </style>
+</head>
+<body>
+    <button>开始</button>
+    <button>结束</button>
+    <div></div>
+    <script>
+        var btn = document.querySelectorAll('button')
+        var div = document.querySelector('div')
+        var timer
+        var count = 0
+        btn[1].disabled=true
+        btn[0].addEventListener('click',()=>{
+            btn[0].disabled=true
+            btn[1].disabled=false
+            timer = setInterval(()=>{
+                count++
+                var p = document.createElement('p')
+                p.innerText = count
+                div.appendChild(p)
+            },1000)
+        })
+        btn[1].addEventListener('click',()=>{
+            btn[0].disabled=false
+            btn[1].disabled=true
+            clearInterval(timer)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fn(){
+            var nn = 10
+            function bar(){
+                n++
+                console.log(nn)
+            }
+            return bar
+        }
+
+        var f1 = fn() // 创建函数对象时产生闭包
+        f1() //11
+        f1() //12
+
+        var f2 = fn()
+        f2() //11
+        f2() //12
+    </script>
+</body>
+</html>

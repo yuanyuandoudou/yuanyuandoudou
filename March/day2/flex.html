@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        1，align-self 属性用于设置弹性子元素自身在侧轴（纵轴）方向上的对齐方式。
+        总而言之：最好可以使用开发者工具进行设置。
+        2，align-content 设置侧轴方向上的行/列的位置，
+           align-slef 是设置侧轴方向上的行内/列内的子元素的位置
+           所以，如果设置了align-content，再设置align-self 是无效的。
+           具体，具体请使用开发者工具进行调试，简单易懂。
+    </title>
+</head>
+<style>
+    .flex-container{
+        padding: 30px;
+        width: 600px;
+        height: 500px;
+        background: #624F5E;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    .flex-item{
+        height:123px;
+    }
+    .flex-1{
+        background: #f00;
+        align-self: flex-start;
+
+    }
+    .flex-2{
+        background: #ff0;
+        align-self: auto;
+
+    }
+    .flex-3{
+        background: #f0f;
+        align-self: flex-end;
+    }
+    .flex-4{
+        background: #0f3;
+        align-self: baseline;
+    }
+    .flex-5{
+        background: #dd3;
+        margin: auto;
+        /* margin-left: auto; */
+    }
+    .flex-6{
+        background: #233;
+        align-self: flex-end;
+    }
+    .flex-7{
+        background: #a3e;
+        align-self: flex-start;
+    }
+ 
+    .flex-container-div{
+        width: 500px;
+        height: 500px;
+        background: #624F5E;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /*align-content: space-between;*/
+    }
+    .flex-item-div{
+        width: 100px;
+        /* height: 100px; */
+    }
+    .flex-item-div1{
+        background: #f00;
+
+        margin: auto;
+        /* margin-bottom: auto; */
+    }
+    .flex-item-div2{
+        background: #ff0;
+        align-self: flex-start;
+    }
+    .flex-item-div3{
+        background: #f0f;
+        align-self: flex-end;
+    }
+    .flex-item-div4{
+        background: #0f3;
+    }
+    .flex-item-div5{
+        background: #dd3;
+    }
+    .flex-item-div6{
+        background: #233;
+        align-self: flex-end;
+    }
+    .flex-item-div7{
+        background: #a3e;
+        align-self: flex-start;
+    }
+    .flex-item-div8{
+        background: #f0f;
+        align-self: flex-end;
+    }
+    .flex-item-div9{
+        background: #0f3;
+    }
+    .flex-item-div10{
+        background: #dd3;
+    }
+</style>
+<body>
+    <h3>
+        以下所有的flex-item都没有设置width，flex-wrap:wrap;设置可以换行;
+        flex-direction:column主轴为：垂直从上到下排列，子元素比较多，所以换行排列。
+        因为没有设置width，默认会占满剩余空间。
+        如果子元素只够排一列，那么子元素width的值默认是弹性盒子宽度的100%，该宽度就是侧轴及其方向
+        如果子元素排两列，那么子元素width的值是弹性盒子的宽度的50%，该宽度就是侧轴及其方向
+        如果子元素排三列，那么子元素width的值是弹性盒子的宽度的33.3%，该宽度就是侧轴及其方向
+        如果子元素排四列，那么子元素width的值是弹性盒子的宽度的25%，该宽度就是侧轴及其方向
+        谨记：align-self是相对于侧轴及其方向上进行位置设定的。如果子元素侧轴宽/高度固定那么该属性就无效了。
+            align-self:
+                auto;         子元素自定拉伸宽度 = 侧轴的最大宽度
+                flex-start;   子元素位于侧轴起点
+                flex-end;     子元素位于侧轴终点
+                center;       子元素位于侧轴中间
+                baseline;     如弹性盒子元素的行内轴与侧轴为同一条，
+                                 则该值与'flex-start'等效。其它情况下，该值将参与基线对齐。
+                                 如果没有设置宽度，那么该子元素的宽度为内容撑开。
+                stretch;      如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，
+                                 但同时会遵照'min/max-width/height'属性的限制。
+    </h3>
+    <div class="flex-container">
+        <span class="flex-item flex-1">flex-item 1</span>
+        <span class="flex-item flex-2">flex-item 2</span>
+        <span class="flex-item flex-3">flex-item 3</span>
+        <span class="flex-item flex-4">flex-item 4</span>
+        <span class="flex-item flex-5">flex-item 5</span>
+        <span class="flex-item flex-6">flex-item 6</span>
+        <span class="flex-item flex-7">flex-item 7</span>
+        <span class="flex-item flex-1">flex-item 1</span>
+        <span class="flex-item flex-2">flex-item 2</span>
+         <span class="flex-item flex-3">flex-item 3</span>
+        <span class="flex-item flex-4">flex-item 4</span>
+        <span class="flex-item flex-5">flex-item 5</span>
+        <span class="flex-item flex-6">flex-item 6</span>
+        <span class="flex-item flex-7">flex-item 7</span> -->
+    </div>
+    <div class="flex-container-div">
+        <div class="flex-item-div flex-item-div1">flex-item-div 1</div>
+        <div class="flex-item-div flex-item-div2">flex-item-div 2</div>
+        <div class="flex-item-div flex-item-div3">flex-item-div 3</div>
+        <div class="flex-item-div flex-item-div4">flex-item-div 4</div>
+        <div class="flex-item-div flex-item-div5">flex-item-div 5</div>
+        <!-- <div class="flex-item-div flex-item-div6">flex-item-div 6</div>
+        <div class="flex-item-div flex-item-div7">flex-item-div 7</div>
+        <div class="flex-item-div flex-item-div8">flex-item-div 8</div>
+        <div class="flex-item-div flex-item-div9">flex-item-div 9</div> -->
+    </div>
+</body>
+</html>

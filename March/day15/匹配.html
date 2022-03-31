@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+        var str = 'sskljfsdlkjfa33424125sdfasfsf3513325s32s'
+    //1.匹配数字
+    // \d匹配数字
+    var re = /\d/; //匹配到第一个数字就停止，返回的值是数组
+    console.log(str.match(re))
+
+
+    //2.g 全局匹配
+     var re1 = /\d/g   //匹配整个字符串，单个返回数组
+     console.log(str.match(re1))
+
+     var re2 = /\d\d/g  //匹配整个字符串，每两个返回数组 不满两个不返回
+     console.log(str.match(re2))
+
+     var re3= /\d+/g
+     console.log(str.match(re3)) //匹配整个字符串，相邻的数字一起返回数组
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                  function getPage(page){
+            var p = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    var num = Math.round(Math.random()*10)
+                    if(num>5){
+                        resolve('成功'+num+'| page:'+page)
+                    }else{
+                        reject('失败')
+                    }
+                },1000)
+            })
+            return p
+        }
+        getPage(1).then((res)=>{
+            console.log('第一次调用')
+            console.log(res)
+            return getPage(2)
+        }).then(res=>{
+            console.log('第二次调用')
+            console.log(res)
+            return getPage(3)
+        }).then(res=>{
+            console.log('第二次调用')
+            console.log(res)
+        }).catch(err=>{
+            console.log('捕获异常'+err)
+        }).finally(()=>{
+            console.log('promise已经结束了')
+        })
+
+        // 多次调用promise的操作的黄金组合
+        // finally 不管是成功还是失败，最终都会执行的语句
+        // **.then(),catch().finally()   这种调用方式.**.**.** 叫做链式调用
+    </script>
+</body>
+</html>

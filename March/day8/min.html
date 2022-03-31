@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var min = diao()
+        function diao (){
+            var scoreArr = [45,67,56,89,98]
+            var a = 0
+            for(var i=0;i<scoreArr.length-1;i++){
+                if(scoreArr[i]<scoreArr[i+1]){
+                    a= scoreArr[i]
+                    scoreArr[i]= scoreArr[i+1]
+                    scoreArr[i+1]=a
+                }
+                console.log(scoreArr)
+            }
+            return scoreArr[scoreArr.length-1]
+        }
+        console.log(min)
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>西施</li>
+        <li>貂蝉</li>
+        <li>王昭君</li>
+        <li>杨贵妃</li>
+        <li>小乔</li>
+    </ul>
+    <input type="text" name="" id="" placeholder="美人">
+    <button>添加</button>
+    <script>
+        const oUl = document.querySelector('ul')
+        const oInput = document.querySelector('input')
+        const oButton = document.querySelector('button')
+        oInput.onclick= function(){
+            for(var i =0;i<oUl.children.length;i++){
+                oUl.children[i].style.background =''
+            }
+            oInput.placeholder=''
+        }
+        oInput.onblur= function(){
+            oInput.placeholder='美人'
+        }
+        oButton.addEventListener('click', function(){
+            var value = oInput.value
+           var oLi =  document.createElement('li')
+            oLi.innerText=value
+            oUl.insertBefore(oLi,oUl.children[0])
+            oInput.value=''
+        })
+        oUl.addEventListener('click',function(e){
+            for(var i =0;i<oUl.children.length;i++){
+                oUl.children[i].style.background =''
+            }
+            e.target.style.background='red'
+        })
+    </script>
+</body>
+</html>

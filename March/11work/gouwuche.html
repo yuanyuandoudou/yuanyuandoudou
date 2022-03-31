@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body div{
+            display: flex;
+            width: 100%;
+        }
+        img{
+            width: 4rem;
+            height: 4rem;
+        }
+        body div div:nth-of-type(1){
+            display: flex;
+            align-items: center;
+        }
+        .footer{
+            position: absolute;
+            width: 100%;
+            height: 1.3333rem;
+            border-top: 1px solid #ccc;
+            top:90%
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <input type="checkbox" name="" id="">
+            <img src="./images/01.png" alt="111">
+        </div>
+        <div>
+            <p>【买赠】旺旺元气轻颜气泡锭</p>
+        </div>
+    </div>
+    <div>
+        <div>
+            <input type="checkbox" name="" id="">
+            <img src="./images/02.png" alt="111">
+        </div>
+        <div>
+            <P>Fix XBody蘸蘸小荞面</P>
+        </div>
+    </div>
+    <div>
+        <div>
+            <input type="checkbox" name="" id="">
+            <img src="./images/03.png" alt="111">
+        </div>
+        <div>
+            <p>旺旺梦幻乐园系列盲盒整盒</p>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <input type="checkbox" name="" id="">全选
+        </div>
+        <div></div>
+        <div></div>
+    </div>
+    <script src="flexible.js"></script>
+    <script>
+        var oCheck = document.querySelectorAll('input')
+        for(var i = 0;i<oCheck.length-1;i++){
+            oCheck[i].onclick= function(){
+                var cont = 0
+                for(var j=0;j<oCheck.length-1;j++){
+                    if(oCheck[j].checked==true){
+                        cont++
+                        console.log(cont)
+                    }
+                    if (cont == 3){
+                    oCheck[oCheck.length-1].checked = true
+                 }
+                    if (cont !== 3){
+                    oCheck[oCheck.length-1].checked = false
+                 }
+                }
+                
+            }
+        }
+        oCheck[oCheck.length-1].onclick = function(){
+                if( oCheck[oCheck.length-1].checked == true){
+                    for(var i = 0 ; i<oCheck.length-1;i++){
+                        oCheck[i].checked=true
+                    }
+                }
+                else{
+                    for(var i = 0 ; i<oCheck.length-1;i++){
+                        oCheck[i].checked=false
+                    }
+                }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.top0{
+    width: 100%;
+    background: #E3E4E5;
+}
+.top{
+    width: 990px;
+    height: 30px;
+    margin: auto;
+    background: #E3E4E5;
+    display: flex;
+    justify-content: space-between;
+    color:#9A9A9A;
+    font-size: 12px;
+}
+.top div{
+    color: #9A9A9A;
+    line-height: 30px;  
+    padding:0 7px 0 0;        
+
+}
+.top div span{
+    color:red;
+    font-size: 14px;
+    line-height: 30px;
+}
+ul{
+    list-style: none;
+
+}
+.top ul li {
+    display: inline-block;
+    padding:0 13px 0 13px;        
+    line-height: 30px;
+}
+.top a{
+    text-decoration: none;
+    color: #B2B3B3;
+}
+.top a:hover{
+    color:red;
+}
+.box0{
+    width: 100%;
+    margin-top: 30px;
+    border-bottom: 0.1px solid #666666;
+
+}
+.box0 .box1{
+    width: 990px;
+    margin: auto;
+    display: flex;
+}
+.box1-tubiao{
+    width: 190px;
+    height: 120px;
+    padding-left: 50px;
+}
+.box1-tubiao span:nth-of-type(1){
+    font-size: 70px;
+    color:silver;
+    display: block;
+    margin-top: -20px;
+}
+.box1-tubiao span:nth-of-type(2){
+    font-size: 40px;
+    color:red;
+    font-family: '华文楷体';
+    display: block;
+    font-weight: 800;
+    margin-top: -10px;
+
+}
+.box1-middle-top0{
+    display: flex;
+}
+.box1-middle-top{
+    display: flex;
+    width: 490px;
+    height: 36px;
+    border: 3px solid #E02626;
+}
+.box1-middle-top input{
+    outline: none;
+    width: 370px;
+    height:32px;
+    border: 0;
+    padding-left: 15px;
+    padding-top: 2px;
+}
+.box1-middle-top a{
+    text-decoration: none;
+    color:#9A9A9A;
+    line-height: 36px;
+    font-size: 20px;
+    padding:0 15px 0 5px;
+}
+.box1-middle-top a:hover{
+    color:#E02626;
+}
+.box1-right{
+    width: 110px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    border: 1px solid rgb(233, 227, 227);
+    margin-left: 20px;
+    color:#E02626;
+}
+.box1-right span{
+    font-size: 14px;
+}
+
+.box1-middle-top button{
+    line-height: 36px;
+    flex:1;   
+    height: 36px;
+    background-color: #E02626;
+    color:white;
+    display: flex;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+}
+.box1-middle-top button span{
+    font-size: large;
+    font-weight: bolder;
+}
+.box2-middle ul li{
+    display: inline-block;
+}
+.box2-middle ul li a{
+    color:#B2B3B3;
+    text-decoration: none;
+    color:#B2B3B3;
+    font-size: 12px;
+    padding-right: 5px;
+}
+.box2-middle ul li a:hover{
+    color:#E02626;
+}
+.box3-bottom ul{
+    display: flex;
+}
+.box3-bottom a{
+    font-size: 15px;
+    text-decoration: none;
+    color:#333333;
+}
+.box3-bottom a:hover{
+    color:#E02626;
+}
+.box3-bottom ul{
+    padding-top: 20px;
+}
+.box3-bottom li{
+    padding: 0 11px 0 11px;
+}
+.box3-bottom li:nth-of-type(1){
+    padding-left: 0;
+}
+.container{
+    width: 990px;
+    margin:auto;
+    padding-top: 10px;
+    display: flex;
+}
+.container-left{
+    width: 190px;
+    height: 470px;
+    color:#333333;
+    background: white;
+    color:#636363;
+}
+.container-left ul{
+    padding-top: 10px;
+}
+.container-left ul li{
+    padding-left: 18px;
+    padding-bottom: 2px;
+}
+.container-left ul li a{
+    text-decoration: none;
+    color:#636363;
+    font-size: 14px;
+}
+.bk{
+    width: 100%;
+    height: 100vh;
+    background:#eef0f3;
+}
+.container-middle{
+    position: relative;
+    width: 590px;
+    height: 470px;
+}
+.container-middle div{
+    display: none;
+}
+.container-middle .active{
+    display: block;
+}
+.container-middle img{
+    width: 590px;
+    height: 470px;
+}
+.container-middle ul{
+    position: absolute;
+    top: 445px;
+    left: 30px;
+    display: flex;
+}
+.container-middle ul li{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    margin-right: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.container span:nth-of-type(1){
+    position: absolute;
+    top:47%;
+    padding-left: 8px;
+    color: white;
+    display: block;
+    width: 20px;
+    height: 30px;
+    line-height: 30px;
+    border-radius:  0 30px 30px 0;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.container span:nth-of-type(2){
+    position: absolute;
+    left: 563px;
+    padding-left: 10px;
+    top:47%;
+    color: white;
+    display: block;
+    width: 17px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 30px 0 0 30px;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+
+}
+
+.container-middle ul .ac{
+    background:white;
+    border:3px solid rgba(0,0,0,0.2);
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = 'ksjfo234512asdjflk3451345134ksjafojsaf23214123ksjfsa314132sklqkejr34133'
+        var re = /[0-9]{5,10}/g   // 匹配 5-10位的数字
+        console.log(str.match(re))
+
+        var re1 = /[0-9]{6}/g  //匹配6位的数字，大于6位后面不显示
+        console.log(str.match(re1))
+
+        var re2 = /[0-9]{6,}/g //匹配大于等于6位的数字
+        console.log(str.match(re2))
+
+        var str1 = 'he33llo  he32sllo  hello123 hessllo hell555o hello he3llo'
+        var re3 = /he[0-9]*llo/g //匹配0个或更多个    4
+        console.log(str1.match(re3))
+
+        var re4 = /he[0-9]+llo/g //匹配1个或更多个    2
+        console.log(str1.match(re4))
+
+        var re5 = /he[0-9]?llo/g //匹配0个或1个    3
+        console.log(str1.match(re5))
+
+   </script>
+</body>
+</html>

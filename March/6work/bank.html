@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var yue = 100
+        while(1){
+         var qiong= +prompt('请输入您要的操作 \n 1.存钱\n 2.取钱\n 3.显示余额\n 4.退出')
+         if( qiong == 1){
+             var cun = +prompt('请输入要存储的金额')
+             yue+=cun
+             alert('本次存款金额为：'+ cun + '元 \n最新余额为：' + yue)
+         }
+         else if( qiong == 2){
+             var qu = +prompt('请输入需要取的金额')
+             if( qu > 100){
+                 alert('没钱取你妈，需要办理贷款请移步柜台操作')
+             }
+             else{
+                 yue-=qu
+                 alert('本次取款金额为：'+ qu +'元\n最新余额为：'+ yue)
+             }
+         }
+         else if( qiong == 3){
+             alert('您的账户余额为：'+ yue +'元（是的，你就是我们口中的穷逼）')
+         }
+         else if( qiong == 4)
+            break;
+         
+         else{
+             alert('眼瞎啊，乱选')
+         }
+        }
+        alert('请取走您的卡片')
+    </script>
+</body>
+</html>

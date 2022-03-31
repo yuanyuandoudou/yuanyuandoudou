@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="">
+    <span>目前只支持.net .com .cn .org的邮箱</span>
+    <button>验证</button>
+    <script>
+        var input = document.querySelector('input')
+        var btn = document.querySelector('button')
+        var span = document.querySelector('span')
+        
+        var re = /^\w+@[0-9a-z]+\.(net|com|cn|org)$/i     //i代表不区分大小写
+        btn.onclick = function(){
+            var text = input.value
+            if(re.test(text)){
+                alert('邮箱格式正确')
+            }else{
+                alert('邮箱格式错误')
+                span.style.color='red'
+            }
+        }
+    </script>
+</body>
+</html>

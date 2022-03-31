@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .se{
+            outline:none;
+            border:1px solid yellow;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="ee" placeholder="邮箱/ID/手机号" class="sa">
+    <input type="password" name="" id="aa" placeholder="密码" class="sa">
+    <script>
+        const accout = document.querySelectorAll('input')
+
+        accout[0].onfocus= function(){
+           accout[0].className='se'
+           if(accout[0].value==''){
+           accout[0].placeholder=''
+           }
+        }
+        accout[0].onblur= function(){
+            if(accout[0].value==''){
+                accout[0].className='sa'
+           accout[0].placeholder='邮箱/ID/手机号'
+            }
+        }
+        accout[1].onfocus= function(){
+           accout[1].className='se'
+           if(accout[1].value==''){
+           accout[1].placeholder=''
+           }
+        }
+        accout[1].onblur= function(){
+            if(accout[1].value==''){
+                accout[1].className='sa'
+           accout[1].placeholder='密码'
+            }
+        }
+    </script>
+</body>
+</html>

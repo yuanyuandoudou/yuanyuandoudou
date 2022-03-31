@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sum = (a,b) => {
+            return a+b
+        }
+        console.log(sum(4,6))
+
+        // 如果函数体只有一句话的时候，可以取消大括号和return  而且去除只能都去除或者都不去除
+        var sum1 = (a,b) => a+b
+        console.log(sum1(4,6))
+
+
+        var kk = (a) =>{
+            return ++a
+        }
+        console.log(kk(10))
+        // 如果参数只有一个的时候，可以省略小括号
+        var kk1 = a => ++a
+        console.log(kk1(10))
+
+    </script>
+</body>
+</html>

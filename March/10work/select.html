@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body{
+            color: #000;
+            font-size: 12px;
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        .zhan a{
+            display: inline-block;
+        }
+        a:hover{
+            color:red;
+        }
+        .top{
+            width: 100px;
+            height: 20px;
+            background: sandybrown;
+
+        }
+        .zhan{
+            width: 200px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            background: sandybrown;
+        }
+        .ye{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="top"><a>企业采购</a></div>
+    <div class="zhan">
+        <a href="#">企业购</a>
+        <a href="#">工业品</a>
+        <a href="#">礼品卡</a>
+        <a href="#">工品优选</a>
+        <a href="#">大中型企业采购</a>
+        <a href="#">公共采购平台</a>
+        <a href="#">商用场景馆</a>
+        <a href="#">微信企业购</a>
+        <a href="#">京东锦礼</a>
+    </div>
+    <script>
+        const otop = document.querySelectorAll('div')
+        const oa = document.querySelectorAll('a')
+            otop[1].onmouseout = function(){
+            otop[1].className='ye'
+        }
+        otop[0].onmouseover = function(){
+            otop[1].className='zhan'
+        }
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mac = {}
+         mac = {
+            color:'gray',
+            weight:'1kg',
+            brand:'apple',
+            type:'pro',
+            watch:function (){
+                console.log('可以看电影')
+            },
+            listen:function(){
+                console.log('可以听音乐')
+            },
+            play:function(){
+                console.log('可以打游戏')
+            },
+            coding:function(){
+                console.log('可以敲代码')
+            }
+        }
+        console.log(mac)
+
+        console.log(mac.coding())
+        var book = new Object()
+        book.color='gray'
+        book.weight='1kg'
+        book.brand='apple'
+        book.type='pro'
+        book.watch=function(){
+            console.log('可以看电影')
+        }
+        book.listen=function(){
+            console.log('可以听音乐')
+        }
+        book.play=function(){
+            console.log('可以打游戏')
+        }
+        book.coding=function(){
+            console.log('可以敲代码')
+        }
+        console.log(book)
+        console.log(book.coding())
+        function Pro(color,weight,brand,type){
+            this.color=color
+            this.weight=weight
+            this.brand=brand
+            this.type=type
+            this.watch=function(){
+            console.log('可以看电影')
+            }
+            this.listen=function(){
+            console.log('可以听音乐')
+            }
+            this.play=function(){
+            console.log('可以打游戏')
+            }
+            this.coding=function(){
+            console.log('可以敲代码')
+            }
+        }
+        var xiaodi = new Pro('gray','1kg','apple','pro')
+        console.log(xiaodi)
+        var dage = new Pro('red','3kg','huawei','max')
+        console.log(dage)
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        //扩展运算符 ... 可以将数组拆分成以逗号分割的参数序列
+        let arr = [1,2,3,4]
+        console.log(arr)
+        console.log(...arr)
+
+        var arr0 = [1,2,5,44,7,21,2]
+        var max = Math.max.apply(Math,arr0)
+        var min = Math.min.apply(Math,arr0)
+        console.log(max,min)
+
+        //合并数组成
+        let arr1 = [1,2,3]
+        let arr2 = [4,5,6]
+        console.log([...arr1,...arr2])
+
+        //可以对一层 数组深拷贝
+        let arr3 = [10,20,30]
+        let arr4 = [...arr3]
+        arr4[1] = 'test'
+        console.log(arr3)
+        console.log(arr4)
+
+        // 使用push 进行数组合并
+        let arr5 = [1,2,3]
+        let arr6 = [4,5,6]
+        arr5.push(...arr6)
+        console.log(arr5)
+
+        // 可以将伪数组转为真数组
+        var aLi = document.querySelectorAll('li')
+        console.log(aLi)
+        var arr7 = [...aLi]
+        console.log(arr7)
+
+        //扩展运算符和解构一起使用   扩展运算数只能放在最后一个形参上
+        let arr8 = ['red','yellow','green']
+        let [color,...colors] = arr8
+        console.log(color,colors)
+
+    </script>
+</body>
+</html>

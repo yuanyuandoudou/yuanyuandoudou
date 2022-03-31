@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画背景</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .container{
+            width: 200px;
+            height: 200px;
+            margin-left: 300px;
+            margin-top: 300px;
+        }
+        .container .da{
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            box-sizing: border-box;
+            border: 8px solid #ccc;
+            overflow: hidden;
+        }
+        .box{
+            width: 200px;
+            height: 100px;
+            display: flex;
+            transform: translate(-100px , 0);
+
+        }
+
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            background: aqua;
+            text-align: center;
+            line-height: 100px;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background: pink;
+            text-align: center;
+            line-height: 100px;
+        }
+        .box:hover{
+            transition: 2s;
+            transform: translate(0 , 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="da">
+            <div class="box">
+                <div class="box1">MI</div>
+                <div class="box2">HOME</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

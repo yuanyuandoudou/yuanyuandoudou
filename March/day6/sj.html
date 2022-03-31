@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sj = parseInt(prompt('输入时刻'))
+        dage(sj);
+        // if(sj >= 0 && sj < 6){
+        //     alert('现在是凌晨'+ sj + '点')
+        // }
+        // else if( sj > 6 && sj < 12){
+        //     alert('现在是上午'+ sj + '点')
+        // }
+        // else if( sj == 12){
+        //     alert('现在是中午'+ sj + '点')
+        // }
+        // else if( sj > 12 && sj <= 18){
+        //     alert('现在是下午'+ sj + '点')
+        // }
+        // else if( sj > 18 && sj < 24){
+        //     alert('现在是晚上'+ sj + '点')
+        // }
+        // else{
+        //     alert(+ sj + '不是正常时间点')
+        // }
+        function dage(){
+        switch(true){
+            case sj>= 0 && sj < 6: alert('现在是凌晨'+ sj + '点')
+            break;
+            case sj >= 6 && sj < 12:alert('现在是上午'+ sj + '点')
+            break;
+            case sj== 12:alert('现在是中午'+ sj + '点')
+            break;
+            case sj> 12 && sj <= 18:alert('现在是下午'+ sj + '点')
+            break;
+            case sj > 18 && sj <24:alert('现在是晚上'+ sj + '点')
+            break;
+            default:alert(+ sj + '不是正常时间点') ;
+        }
+    }
+    </script>
+</body>
+</html>

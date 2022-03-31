@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //转义字符 \d 匹配数字   大写字母为取反
+        var str = 'df234hjk532knl314__1k@314-223%@'
+        var re = /\d+/g; 
+        var re0 = /\D+/g; 
+        console.log(str.match(re))
+        console.log(str.match(re0))
+
+
+        // \w 匹配数字字母下划线  大写字母为取反
+        var re1 = /\w+/g
+        var re11 = /\W+/g
+        console.log(str.match(re1))
+        console.log(str.match(re11))
+
+        // \s 匹配 空白符   大写字母为取反
+        var str1 = 'hello hello1123 he34llo 234hello aasf'
+        var re2 = /\s+/g
+        var re22 = /\S+/g
+        console.log(str1.match(re2))
+        console.log(str1.match(re22))
+
+        // [^ ]  前面的^代表非，所以匹配的数组不包括中括号里的内容
+        var re3 = /[^abc]/g
+        str3 = 'abckljklsfabc jioassdlfj abclsajfsio#%$'
+        console.log(str3.match(re3))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Array.from 将对象或类数组转为数组
+        let likeArray = {
+            '0':'a',
+            '1':'b',
+            '2':'c',
+            length:3
+        }
+        console.log(likeArray)
+        let arr = Array.from(likeArray)
+
+        let loveArray = {
+            '0':1,
+            '1':2,
+            '2':3,
+            length:3
+        }
+        let arr1 = Array.from(loveArray,item => item *2)
+        console.log(arr1)
+        //indexOf search 找到返回数据下标，没找到返回-1
+        //find 找到返回数据本身，没找到返回undefined  只匹配第一个找到的数据，后面的不再执行
+
+        let ary = [{
+            id:1,
+            name:'张三'
+        },{
+            id:2,
+            name:'李四'
+        }]
+        let target = ary.find((item,index)=> item.id ==3)
+        console.log(taget)
+
+
+        //findIndex 找到某个数据，找到返回下标，没找到返回-1  只匹配第一个找到的数据，后面的不再执行
+        let ary1 = [1,5,10,15]
+        let index = ary1.findIndex((value,index)=>value>9)
+        console.log(index)
+
+        // 查找是否存在该数组，存在返回true 否则返回false
+        var m = [1,2,3].includes(2)
+        var n = [1,2,3].includes(4)
+        console.log(m,n)
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            function getPage(page){
+            var p = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    var num = Math.round(Math.random()*10)
+                    if(num>5){
+                        resolve('成功'+num+'| page:'+page)
+                    }else{
+                        reject('失败')
+                    }
+                },1000)
+            })
+            return p
+        }
+        getPage(1).then((res)=>{
+            console.log('第一次调用')
+            console.log(res)
+            return getPage(2)
+        }).then(res=>{
+            console.log('第二次调用')
+            console.log(res)
+            return getPage(3)
+        }).then(res=>{
+            console.log('第二次调用')
+            console.log(res)
+        }).catch(err=>{
+            console.log('捕获异常'+err)
+        })
+
+        // 如果几次操作，其中有一次失败，后面的promise的调用都终止
+    </script>
+</body>
+</html>

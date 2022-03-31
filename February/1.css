@@ -1,0 +1,109 @@
+.bbb{
+    cursor: pointer;
+}
+
+a:link{
+    color:grey;
+    text-decoration: none;
+}
+
+a:hover{
+    color:green;
+}
+
+a:visited{
+    color: pink;
+}
+
+table{
+    border: 1px dashed;
+    border-spacing: 0px;
+}
+table td{
+    border: 1px dashed;
+}
+table th{
+    border: 1px dashed;
+}
+
+
+img{
+    width:30px;
+    height:auto;
+}
+
+.zz{
+    text-transform: capitalize;
+}
+
+ul{
+    list-style: circle;
+}
+
+.container{
+    box-sizing: border-box;
+    width:200px;
+    height:200px;
+    background-color: red;
+    margin:0px;
+    border: 50px solid;
+    border-color: aqua;
+    position: relative;
+    padding: 0px;
+}
+
+.box1{
+    box-sizing: border-box;
+    width:80px;
+    height:100px;
+    font-size: 8px;
+    left:30px;
+    position: absolute;
+    margin: 0px;
+    border: 0px;
+    padding:0px;
+}
+
+.box1 p{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.fd{
+    width: 500px;
+    height: 300px;
+    font-size: 0;
+}
+.box3{
+    width:100px;
+    height: 50px;
+    background-color: aquamarine;
+    display: inline-block;
+
+}
+.box4{
+    width: 200px;
+    height: 50px;
+    background-color: red;
+    display: inline-block;
+}
+
+.lb{
+    box-sizing: border-box;
+    width:800px;
+    background-color: yellow;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.weirao{
+    width: 300px;
+    height: 80px;
+    white-space: pre-wrap;
+}
+
+.xf{
+    width: 100px;
+    height:100px;
+    background-color: blue;
+}

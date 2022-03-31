@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = 'abaasdffggghhjjkkgfddsssss3444343'
+        console.log(str.length)
+        
+        var ge=str.charAt(0).concat(str.charAt(3),str.charAt(5),str.charAt(9))
+        console.log(ge)
+        str.indexOf('i')>=0?console.log('i存在'):console.log('i不存在')
+        str.indexOf('c')>=0?console.log('c存在'):console.log('c不存在')
+        str.indexOf('b')>=0?console.log('b存在'):console.log('b不存在')
+        while(str.indexOf('g')!==-1){
+            str = str.replace('g','22')
+        }
+        console.log(str)
+        while(str.indexOf('ss')!==-1){
+            str = str.replace('ss','b')
+        }
+        console.log(str)
+        var kk = str.slice(1,7) //后面的7为结束的下标，且不包括该下标上的字符
+        console.log(kk)
+        var bb = str.substring(1,7)//后面的7位结束下标，且不包括，与slice的区别在于只能是非负数
+        console.log(bb)
+        var gg = str.substr(1,7) //后面的7为截取数量
+        console.log(gg)
+       for(i in str){
+           console.log('@'+str.charAt(i)+'@')
+       }
+
+    </script>
+</body>
+</html>

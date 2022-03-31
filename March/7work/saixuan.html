@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var k = +prompt('请输入学生人数')
+        var score = []
+        var d = 0
+        var c= 0
+        var a=0
+        for(var i=0; i<k; i++){
+            d = +prompt('请输入第'+(i+1)+'个学生的成绩')
+            if(d >= 60){
+                score[c]=d
+                c++
+            }
+        }
+        d = score.length
+        for( d;d>1;d--){
+            for(c=0;c<=d-2;c++){
+                if(score[c] < score[c+1]){
+                    a = score[c]
+                    score[c] = score[c+1]
+                    score[c+1] = a
+                }
+            }
+        }
+        alert('60分以上的同学有'+score.length+'个\n成绩由高到低排列为'+score)
+</script>
+</body>
+</html>
